@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Trusted Enterprises | Mobile Parts Wholesale</title>
+
+<meta name="description"
+content="Trusted Enterprises provides premium wholesale mobile phone parts and components for businesses and professionals.">
+
+<meta name="keywords"
+content="Trusted Enterprises, mobile parts wholesale, mobile spare parts, smartphone parts, phone components">
+
+<meta name="author"
+content="Trusted Enterprises">
+
+<meta name="robots"
+content="index, follow">
+
+<meta name="theme-color"
+content="#050505">
+
+<meta property="og:title"
+content="Trusted Enterprises | Mobile Parts Wholesale">
+
+<meta property="og:description"
+content="Premium mobile phone parts and components for businesses.">
+
+<meta property="og:type"
+content="website">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#fff;
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+body:before{
+content:"";
+position:fixed;
+width:420px;
+height:420px;
+background:#ff4d00;
+filter:blur(150px);
+opacity:.14;
+top:-180px;
+left:-150px;
+z-index:-1;
+}
+
+body:after{
+content:"";
+position:fixed;
+width:420px;
+height:420px;
+background:#00ff88;
+filter:blur(160px);
+opacity:.09;
+right:-180px;
+bottom:-180px;
+z-index:-1;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+height:75px;
+padding:0 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#050505d9;
+backdrop-filter:blur(20px);
+border-bottom:1px solid #ffffff12;
+z-index:100;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:11px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.logoBox{
+width:43px;
+height:43px;
+display:grid;
+place-items:center;
+border-radius:13px;
+background:linear-gradient(
+135deg,
+#ff6500,
+#ff1d00
+);
+box-shadow:0 0 35px #ff5a0060;
+}
+
+.navBtns{
+display:flex;
+gap:8px;
+}
+
+.navBtns button{
+padding:10px 15px;
+border-radius:25px;
+border:1px solid #ffffff18;
+background:#ffffff08;
+color:#fff;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+padding:130px 20px 80px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.badge{
+padding:9px 17px;
+border:1px solid #ffffff18;
+border-radius:30px;
+background:#ffffff06;
+color:#999;
+font-size:9px;
+letter-spacing:2px;
+animation:float 3s infinite;
+}
+
+.hero h1{
+margin-top:30px;
+font-size:clamp(
+55px,
+15vw,
+130px
+);
+line-height:.85;
+letter-spacing:-8px;
+}
+
+.hero h1 span{
+background:linear-gradient(
+90deg,
+#fff,
+#ff5a00,
+#fff
+);
+background-size:200%;
+-webkit-background-clip:text;
+color:transparent;
+animation:shine 4s linear infinite;
+}
+
+.hero p{
+max-width:620px;
+margin-top:30px;
+color:#777;
+font-size:14px;
+line-height:1.8;
+}
+
+.buttons{
+margin-top:35px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.buttons button{
+padding:16px 25px;
+border-radius:13px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.primary{
+background:#fff;
+color:#000;
+border:0;
+}
+
+.secondary{
+background:#ffffff08;
+color:#fff;
+border:1px solid #ffffff18;
+}
+
+/* SECTIONS */
+
+section:not(.hero){
+padding:90px 7%;
+}
+
+.title{
+font-size:42px;
+letter-spacing:-2px;
+margin-bottom:35px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:15px;
+}
+
+.card{
+padding:30px;
+min-height:190px;
+border-radius:22px;
+border:1px solid #ffffff10;
+background:#ffffff05;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#ff5a0060;
+box-shadow:0 25px 70px #000;
+}
+
+.icon{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+font-size:13px;
+line-height:1.7;
+}
+
+/* WHY */
+
+.why{
+text-align:center;
+}
+
+.why .products{
+text-align:left;
+}
+
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:15px;
+}
+
+.stat{
+padding:35px;
+text-align:center;
+border:1px solid #ffffff10;
+border-radius:20px;
+background:#ffffff05;
+}
+
+.stat h2{
+font-size:38px;
+}
+
+.stat p{
+margin-top:8px;
+font-size:10px;
+letter-spacing:2px;
+color:#666;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:13px;
+color:#777;
+}
+
+.contact a{
+color:#ff6a00;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+border-top:1px solid #ffffff10;
+color:#555;
+font-size:11px;
+}
+
+/* MODAL */
+
+.modal{
+position:fixed;
+inset:0;
+display:none;
+align-items:center;
+justify-content:center;
+background:#000c;
+backdrop-filter:blur(15px);
+z-index:500;
+padding:20px;
+}
+
+.modal.active{
+display:flex;
+}
+
+.modalBox{
+width:100%;
+max-width:400px;
+padding:30px;
+border-radius:25px;
+background:#111;
+border:1px solid #ffffff15;
+box-shadow:0 30px 100px #000;
+}
+
+.modalBox h2{
+margin-bottom:20px;
+font-size:30px;
+}
+
+.modalBox input{
+width:100%;
+padding:15px;
+margin:7px 0;
+border-radius:12px;
+border:1px solid #ffffff15;
+background:#050505;
+color:#fff;
+outline:none;
+}
+
+.modalBox button{
+width:100%;
+padding:15px;
+margin-top:12px;
+border-radius:12px;
+border:0;
+cursor:pointer;
+font-weight:bold;
+}
+
+.close{
+background:#ffffff10!important;
+color:#fff;
+}
+
+/* ANIMATIONS */
+
+@keyframes shine{
+
+0%{
+background-position:0%;
+}
+
+100%{
+background-position:200%;
+}
+
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.products,
+.stats{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+letter-spacing:-5px;
+}
+
+.logo{
+font-size:8px;
+}
+
+.navBtns button{
+padding:8px 10px;
+font-size:9px;
+}
+
+.title{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">
+
+<div class="logoBox">
+TE
+</div>
+
+TRUSTED ENTERPRISES
+
+</div>
+
+
+<div class="navBtns">
+
+<button onclick="openModal('login')">
+LOGIN
+</button>
+
+<button onclick="openModal('signup')">
+SIGN UP
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="badge">
+PREMIUM MOBILE PARTS • WHOLESALE
+</div>
+
+<h1>
+
+TRUSTED<br>
+
+<span>
+ENTERPRISES.
+</span>
+
+</h1>
+
+<p>
+
+Premium mobile phone parts and components
+for businesses that demand quality,
+reliability and consistency.
+
+</p>
+
+
+<div class="buttons">
+
+<button
+class="primary"
+onclick="goTo('parts')">
+
+EXPLORE PARTS →
+
+</button>
+
+
+<button
+class="secondary"
+onclick="goTo('contact')">
+
+CONTACT US
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="parts">
+
+<h2 class="title">
+What We Supply
+</h2>
+
+
+<div class="products">
+
+
+<div class="card">
+
+<div class="icon">
+📱
+</div>
+
+<h3>
+Displays
+</h3>
+
+<p>
+Premium replacement displays
+for multiple smartphone brands.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🔋
+</div>
+
+<h3>
+Batteries
+</h3>
+
+<p>
+Reliable mobile batteries
+for wholesale requirements.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Charging Parts
+</h3>
+
+<p>
+Charging boards, connectors
+and related components.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🔊
+</div>
+
+<h3>
+Speakers
+</h3>
+
+<p>
+Mobile speakers and audio
+replacement components.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+📷
+</div>
+
+<h3>
+Cameras
+</h3>
+
+<p>
+Replacement camera modules
+for supported smartphones.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🧩
+</div>
+
+<h3>
+Other Parts
+</h3>
+
+<p>
+Ask our team for additional
+mobile components.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- WHY -->
+
+<section class="why">
+
+<h2 class="title">
+Why Trusted Enterprises?
+</h2>
+
+
+<div class="products">
+
+
+<div class="card">
+
+<div class="icon">
+🛡️
+</div>
+
+<h3>
+Built on Trust
+</h3>
+
+<p>
+Reliable wholesale mobile parts
+for businesses and professionals.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Business Ready
+</h3>
+
+<p>
+Professional components
+for wholesale requirements.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🌐
+</div>
+
+<h3>
+Multiple Brands
+</h3>
+
+<p>
+Components for a wide range
+of popular smartphone devices.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>
+01
+</h2>
+
+<p>
+QUALITY FIRST
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>
+24/7
+</h2>
+
+<p>
+BUSINESS SUPPORT
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>
+∞
+</h2>
+
+<p>
+POSSIBILITIES
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section
+id="contact"
+class="contact">
+
+<h2 class="title">
+Let's Work Together.
+</h2>
+
+<p>
+Wholesale mobile parts & components.
+</p>
+
+<p>
+📞
+<a href="tel:+918090209135">
++91 80902 09135
+</a>
+</p>
+
+<p>
+✉️
+<a href="mailto:sahanvajmirza69@gmail.com">
+sahanvajmirza69@gmail.com
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://www.instagram.com/im_shahnawazz._/"
+target="_blank">
+@im_shahnawazz._
+</a>
+</p>
+
+<p>
+YouTube:
+<a href="https://youtube.com/@shanuyt_04"
+target="_blank">
+@shanuyt_04
+</a>
+</p>
+
+<p>
+Facebook:
+<a href="https://www.facebook.com/sahanvaj.mirza.75"
+target="_blank">
+Trusted Enterprises
+</a>
+</p>
+
+</section>
+
+
+<footer>
+
+© 2026 Trusted Enterprises.
+All rights reserved.
+
+</footer>
+
+
+<!-- LOGIN / SIGNUP -->
+
+<div
+class="modal"
+id="modal">
+
+<div class="modalBox">
+
+<h2 id="modalTitle">
+Welcome Back
+</h2>
+
+
+<input
+id="nameInput"
+type="text"
+placeholder="Full name"
+style="display:none;">
+
+
+<input
+type="email"
+placeholder="Email address">
+
+
+<input
+type="password"
+placeholder="Password">
+
+
+<button
+class="primary"
+onclick="submitForm()">
+
+CONTINUE →
+
+</button>
+
+
+<button
+class="close"
+onclick="closeModal()">
+
+CLOSE
+
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+let mode="login";
+
+
+function openModal(type){
+
+mode=type;
+
+document
+.getElementById("modal")
+.classList.add("active");
+
+
+const title=
+document.getElementById(
+"modalTitle"
+);
+
+const name=
+document.getElementById(
+"nameInput"
+);
+
+
+if(type==="signup"){
+
+title.textContent=
+"Create Account";
+
+name.style.display=
+"block";
+
+}
+
+else{
+
+title.textContent=
+"Welcome Back";
+
+name.style.display=
+"none";
+
+}
+
+}
+
+
+function closeModal(){
+
+document
+.getElementById("modal")
+.classList.remove(
+"active"
+);
+
+}
+
+
+function submitForm(){
+
+if(mode==="signup"){
+
+alert(
+"Signup interface is ready. Secure backend authentication can be connected next."
+);
+
+}
+
+else{
+
+alert(
+"Login interface is ready. Secure authentication can be connected next."
+);
+
+}
+
+}
+
+
+function goTo(id){
+
+document
+.getElementById(id)
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+
+</body>
+
+</html>
