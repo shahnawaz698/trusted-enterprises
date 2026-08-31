@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#070708" />
+<meta name="description" content="Trusted Enterprises — wholesale mobile spare parts. Owner Shahnawaz Mirza. Displays, batteries, charging assemblies, flexes and repair components for service centres." />
+<title>Trusted Enterprises | Wholesale Mobile Parts</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23070708'/%3E%3Crect x='1' y='1' width='30' height='30' rx='5' fill='none' stroke='%23FF6A00' stroke-width='1.5'/%3E%3Cpath fill='%23FF6A00' d='M8 8h16v3H18v13h-4V11H8z'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --bg: #070708;
+  --bg-2: #0c0c0e;
+  --elev: #121216;
+  --elev-2: #18181e;
+  --elev-3: #1f1f26;
+  --fg: #f3efe6;
+  --muted: #9b968c;
+  --faint: #6e6a62;
+  --line: color-mix(in oklab, var(--fg) 10%, transparent);
+  --line-2: color-mix(in oklab, var(--fg) 18%, transparent);
+  --accent: #ff6a00;
+  --accent-2: #ff8a3d;
+  --accent-fg: #140800;
+  --accent-dim: color-mix(in oklab, var(--accent) 14%, transparent);
+  --ok: #3ecf8e;
+  --warn: #e0a106;
+  --bad: #e24b4b;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --font-d: "Sora", system-ui, sans-serif;
+  --font-b: "IBM Plex Sans", system-ui, sans-serif;
+  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-base: 1rem;
+  --text-lg: 1.125rem; --text-xl: clamp(1.35rem, 1.1rem + 1vw, 1.75rem);
+  --text-2xl: clamp(2rem, 1.3rem + 2.4vw, 3.25rem);
+  --text-3xl: clamp(2.4rem, 1.4rem + 3.6vw, 4.4rem);
+  --header-h: 68px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 150ms; --med: 250ms; --slow: 400ms;
+  --shadow: 0 24px 60px rgba(0,0,0,.45);
+  --max: 1240px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-b); line-height: 1.5; min-height: 100%; overflow-x: hidden; }
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3,h4 { font-family: var(--font-d); font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--accent); color: var(--accent-fg); padding: 8px 12px; z-index: 100; }
+.skip:focus { left: 8px; top: 8px; }
+
+#loader { position: fixed; inset: 0; z-index: 80; background: var(--bg); display: grid; place-items: center; transition: opacity var(--slow) var(--ease), visibility var(--slow) var(--ease); }
+#loader.hide { opacity: 0; visibility: hidden; pointer-events: none; transition: none; }
+.loader-inner { width: min(420px, calc(100% - 48px)); text-align: center; }
+.loader-mark { width: 64px; height: 64px; margin: 0 auto 28px; }
+.loader-kicker { font-family: var(--font-d); font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.loader-title { font-size: 1.35rem; margin-bottom: 28px; }
+.bar { height: 2px; background: var(--elev-3); overflow: hidden; border-radius: 99px; }
+.bar > i { display: block; height: 100%; width: 0; background: var(--accent); transition: width 180ms linear; }
+.loader-pct { margin-top: 10px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+#welcome { position: fixed; inset: 0; z-index: 70; background: var(--bg); display: none; place-items: center; }
+#welcome.show { display: grid; }
+.welcome-inner { text-align: center; animation: rise .7s var(--ease) both; }
+.welcome-kicker { color: var(--accent); letter-spacing: .28em; text-transform: uppercase; font-size: 11px; font-family: var(--font-d); }
+.welcome-inner h2 { font-size: var(--text-3xl); margin: 12px 0 8px; }
+.welcome-inner p { color: var(--muted); }
+
+#app { min-height: 100vh; display: none; flex-direction: column; }
+#app.ready { display: flex; }
+.wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+@media (max-width: 720px) { .wrap { width: min(var(--max), calc(100% - 28px)); } }
+
+header.site { position: sticky; top: 0; z-index: 40; height: var(--header-h); background: color-mix(in oklab, var(--bg) 88%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); }
+.hdr { height: var(--header-h); display: flex; align-items: center; gap: 18px; }
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand svg { width: 34px; height: 34px; }
+.brand-name { font-family: var(--font-d); font-weight: 600; font-size: 13px; letter-spacing: .04em; line-height: 1.15; }
+.brand-name span { display: block; color: var(--muted); font-weight: 400; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.search-wrap { flex: 1; position: relative; max-width: 520px; }
+.search-wrap input { width: 100%; height: 42px; background: var(--elev); border: 1px solid var(--line); border-radius: 999px; padding: 0 42px 0 40px; color: var(--fg); }
+.search-wrap input::placeholder { color: var(--faint); }
+.search-ico, .search-clear { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; display: grid; place-items: center; color: var(--muted); }
+.search-ico { left: 4px; pointer-events: none; }
+.search-clear { right: 4px; }
+.hdr-actions { display: flex; align-items: center; gap: 4px; margin-left: auto; }
+.icon-btn { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 999px; color: var(--fg); position: relative; }
+.icon-btn:hover { background: var(--elev); }
+.icon-btn .dot { position: absolute; top: 8px; right: 8px; min-width: 16px; height: 16px; padding: 0 4px; border-radius: 99px; background: var(--accent); color: var(--accent-fg); font-size: 10px; font-weight: 600; display: grid; place-items: center; font-variant-numeric: tabular-nums; }
+.avatar-btn { width: 36px; height: 36px; border-radius: 99px; overflow: hidden; background: var(--elev-2); border: 1px solid var(--line-2); display: grid; place-items: center; font-family: var(--font-d); font-size: 12px; color: var(--accent); }
+.avatar-btn img { width: 100%; height: 100%; object-fit: cover; }
+.menu-btn { display: none; }
+nav.desk { display: flex; gap: 2px; }
+nav.desk a { font-size: 13px; color: var(--muted); padding: 8px 10px; border-radius: 8px; }
+nav.desk a:hover, nav.desk a.on { color: var(--fg); background: var(--elev); }
+
+.rail { border-bottom: 1px solid var(--line); background: var(--bg-2); overflow-x: auto; }
+.rail .wrap { display: flex; gap: 28px; overflow: auto; font-size: 12px; color: var(--muted); height: 36px; align-items: center; letter-spacing: .04em; }
+.rail b { color: var(--accent); font-weight: 500; }
+
+main { flex: 1; }
+.page { padding: 36px 0 72px; animation: rise var(--med) var(--ease) both; }
+
+.hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: end; padding: 28px 0 12px; }
+.kicker { font-family: var(--font-d); font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+.hero h1 { font-size: var(--text-3xl); max-width: 16ch; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.lede { color: var(--muted); max-width: 46ch; margin-top: 18px; font-size: 1.05rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.owner-line { margin-top: 22px; font-size: 13px; color: var(--faint); }
+.owner-line strong { color: var(--fg); font-weight: 500; }
+.hero-panel { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 22px; display: grid; gap: 14px; }
+.stat { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.stat:last-child { border: 0; padding: 0; }
+.stat b { font-family: var(--font-d); font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: 13px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; font-family: var(--font-d); font-size: 13px; font-weight: 600; letter-spacing: .02em; transition: transform var(--fast) var(--ease), background var(--fast) var(--ease), border-color var(--fast) var(--ease); }
+.btn:active { transform: scale(.98); }
+.btn-p { background: var(--accent); color: var(--accent-fg); }
+.btn-p:hover { background: var(--accent-2); }
+.btn-g { background: transparent; border: 1px solid var(--line-2); color: var(--fg); }
+.btn-g:hover { border-color: var(--accent); color: var(--accent); }
+.btn-sm { min-height: 38px; padding: 0 14px; font-size: 12px; }
+.btn-block { width: 100%; }
+
+.section { margin-top: 56px; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 22px; }
+.sec-head h2 { font-size: var(--text-xl); }
+.sec-head p { color: var(--muted); font-size: 14px; }
+
+.brand-grid, .cat-grid, .prod-grid { display: grid; gap: 12px; }
+.brand-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.cat-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+.prod-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+
+.card { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; transition: border-color var(--fast) var(--ease), transform var(--fast) var(--ease); }
+.card:hover { border-color: color-mix(in oklab, var(--accent) 45%, var(--line)); transform: translateY(-2px); }
+.b-card, .c-card { padding: 16px; min-height: 92px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+.b-card small, .c-card small { color: var(--faint); font-size: 12px; }
+.c-card svg { width: 22px; height: 22px; color: var(--accent); margin-bottom: 10px; }
+
+.p-art { height: 168px; background: var(--elev-2); display: grid; place-items: center; position: relative; }
+.p-art svg { width: 120px; height: 120px; }
+.p-body { padding: 14px 14px 16px; display: grid; gap: 8px; }
+.p-sku { font-size: 11px; color: var(--faint); letter-spacing: .08em; }
+.p-name { font-family: var(--font-d); font-size: 14px; font-weight: 600; letter-spacing: -.02em; line-height: 1.3; min-height: 36px; }
+.p-meta { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.price { font-family: var(--font-d); font-weight: 600; font-variant-numeric: tabular-nums; }
+.badge { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; padding: 4px 8px; border-radius: 99px; border: 1px solid var(--line); color: var(--muted); }
+.badge.ok { color: var(--ok); border-color: color-mix(in oklab, var(--ok) 35%, transparent); }
+.badge.low { color: var(--warn); border-color: color-mix(in oklab, var(--warn) 35%, transparent); }
+.badge.out { color: var(--bad); border-color: color-mix(in oklab, var(--bad) 35%, transparent); }
+.p-actions { display: flex; gap: 8px; }
+.heart { width: 38px; height: 38px; border-radius: 99px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--muted); flex-shrink: 0; }
+.heart.on { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
+.filters { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 960px) { .filters { grid-template-columns: 250px 1fr; align-items: start; } }
+.side { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 16px; position: sticky; top: calc(var(--header-h) + 16px); }
+.side h3 { font-size: 13px; margin: 16px 0 8px; }
+.side h3:first-child { margin-top: 0; }
+.side select, .side input[type="number"], .field input, .field select, .field textarea {
+  width: 100%; height: 42px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 0 12px;
+}
+.field textarea { height: auto; min-height: 120px; padding: 12px; resize: vertical; }
+.chk { display: flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted); margin: 6px 0; }
+.chk input { accent-color: var(--accent); }
+.range { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.muted { color: var(--muted); }
+.faint { color: var(--faint); }
+.pager { display: flex; gap: 6px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+.pager button { min-width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--line); }
+.pager button.on, .pager button:hover { border-color: var(--accent); color: var(--accent); }
+
+.product { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; }
+.gallery { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-xl); min-height: 360px; display: grid; place-items: center; }
+.gallery svg { width: 220px; height: 220px; }
+.crumbs { font-size: 13px; color: var(--muted); margin-bottom: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+.crumbs a:hover { color: var(--accent); }
+.spec { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 18px; }
+.spec th, .spec td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.spec th { color: var(--muted); font-weight: 500; width: 38%; }
+.compat { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip { border: 1px solid var(--line); border-radius: 99px; padding: 6px 12px; font-size: 12px; color: var(--muted); }
+.chip:hover { border-color: var(--accent); color: var(--fg); }
+.qty { display: flex; align-items: center; gap: 0; border: 1px solid var(--line); border-radius: 99px; overflow: hidden; height: 44px; }
+.qty button { width: 44px; height: 44px; }
+.qty input { width: 56px; text-align: center; background: transparent; border: 0; height: 44px; }
+
+.prose { max-width: 72ch; color: var(--muted); display: grid; gap: 14px; }
+.prose h2 { color: var(--fg); font-size: var(--text-xl); margin-top: 12px; }
+.prose h3 { color: var(--fg); font-size: 1.05rem; margin-top: 8px; }
+.prose ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.two { display: grid; gap: 18px; }
+@media (min-width: 800px) { .two { grid-template-columns: 1fr 1fr; } }
+
+.why-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.why { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 20px; }
+.why h3 { font-size: 1rem; margin-bottom: 8px; }
+.why p { color: var(--muted); font-size: 14px; }
+
+.form { display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 12px; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; font-family: var(--font-d); }
+.auth-card, .panel { background: var(--elev); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 28px; max-width: 460px; }
+.panel { max-width: none; }
+.profile-top { display: flex; gap: 18px; align-items: center; }
+.avatar-lg { width: 88px; height: 88px; border-radius: 99px; overflow: hidden; background: var(--elev-2); border: 1px solid var(--line-2); display: grid; place-items: center; font-family: var(--font-d); font-size: 28px; color: var(--accent); flex-shrink: 0; }
+.avatar-lg img { width: 100%; height: 100%; object-fit: cover; }
+
+.enq-row { display: grid; grid-template-columns: 1fr auto auto auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.enq-row h4 { font-size: 14px; }
+
+footer.site { border-top: 1px solid var(--line); padding: 48px 0 28px; background: var(--bg-2); margin-top: auto; }
+.f-grid { display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+.f-grid h4 { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); margin-bottom: 12px; }
+.f-grid a, .f-grid p { display: block; color: var(--muted); font-size: 14px; margin: 6px 0; }
+.f-grid a:hover { color: var(--accent); }
+.f-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--faint); }
+
+#toasts { position: fixed; right: 16px; bottom: 16px; z-index: 90; display: grid; gap: 8px; width: min(360px, calc(100% - 32px)); }
+.toast { background: var(--elev-2); border: 1px solid var(--line-2); border-left: 3px solid var(--accent); border-radius: var(--radius-md); padding: 12px 14px; font-size: 14px; box-shadow: var(--shadow); animation: rise var(--fast) var(--ease) both; }
+
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.62); z-index: 55; display: none; }
+.overlay.show { display: block; }
+.drawer { position: fixed; top: 0; right: 0; height: 100%; width: min(420px, 100%); background: var(--bg); z-index: 56; border-left: 1px solid var(--line); transform: translateX(100%); transition: transform var(--med) var(--ease); display: flex; flex-direction: column; }
+.drawer.show { transform: none; }
+.drawer-h { display: flex; justify-content: space-between; align-items: center; padding: 18px 18px; border-bottom: 1px solid var(--line); }
+.drawer-b { padding: 18px; overflow: auto; flex: 1; }
+.mnav a { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); font-family: var(--font-d); }
+
+.empty { text-align: center; padding: 48px 16px; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--radius-lg); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 50% { opacity: .55; } }
+
+@media (max-width: 900px) {
+  .hero, .product, .f-grid { grid-template-columns: 1fr; }
+  nav.desk { display: none; }
+  .menu-btn { display: grid; }
+  .search-wrap { display: none; }
+  .search-wrap.mobile { display: block; max-width: none; margin: 12px 0 0; }
+  .side { position: static; }
+  .enq-row { grid-template-columns: 1fr 1fr; }
+  .brand-name { max-width: 9.5rem; }
+  .hdr { gap: 8px; }
+  .icon-btn { width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="loader" role="status" aria-live="polite">
+  <div class="loader-inner">
+    <svg class="loader-mark" viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#ff6a00" stroke-width="2"/>
+      <path d="M16 16h32v6H36v26h-8V22H16z" fill="#ff6a00"/>
+    </svg>
+    <div class="loader-kicker">Wholesale · Mobile parts</div>
+    <div class="loader-title">Trusted Enterprises</div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="loader-pct" id="lpct">Preparing catalogue 0%</div>
+  </div>
+</div>
+<div id="welcome"><div class="welcome-inner" id="welcomeInner"></div></div>
+<div id="app">
+  <header class="site"><div class="wrap hdr" id="hdr"></div></header>
+  <div class="rail"><div class="wrap" id="rail"></div></div>
+  <div class="wrap"><div class="search-wrap mobile" id="msearch"></div></div>
+  <main id="main"></main>
+  <footer class="site" id="ftr"></footer>
+</div>
+<div class="overlay" id="ov"></div>
+<aside class="drawer" id="drawer" aria-hidden="true"></aside>
+<div id="toasts"></div>
+<noscript><p style="padding:24px;color:#f3efe6">JavaScript is required to use Trusted Enterprises.</p></noscript>
+<script>
+(function () {
+  "use strict";
+
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (v) => {
+    return String(v == null ? "" : v).replace(/[&<>"']/g, (c) => {
+      if (c === "&") return "&" + "amp;";
+      if (c === "<") return "&" + "lt;";
+      if (c === ">") return "&" + "gt;";
+      if (c === '"') return "&" + "quot;";
+      return "&#" + "39;";
+    });
+  };
+  const fmt = (n) => "₹" + Number(n).toLocaleString("en-IN");
+  const uid = (p) => (p || "TE") + Math.random().toString(36).slice(2, 8).toUpperCase();
+
+  const ICONS = {
+    search: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>',
+    x: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+    heart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19s-7-4.4-7-9a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 4.6-7 9-7 9z"/></svg>',
+    bag: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg>',
+    user: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.5-3 4-4.5 7-4.5S17.5 16 19 19"/></svg>',
+    mute: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10v4h3l5 4V6L7 10H4zM16 9l5 6M21 9l-5 6"/></svg>',
+    vol: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10v4h3l5 4V6L7 10H4z"/><path d="M16 9.5a4 4 0 0 1 0 5M18.5 7a7 7 0 0 1 0 10"/></svg>',
+    menu: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
+    plus: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>',
+    minus: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14"/></svg>'
+  };
+
+  const BRANDS = [
+    { id: "apple", name: "Apple", origin: "USA" },
+    { id: "samsung", name: "Samsung", origin: "South Korea" },
+    { id: "xiaomi", name: "Xiaomi", origin: "China" },
+    { id: "redmi", name: "Redmi", origin: "China" },
+    { id: "poco", name: "POCO", origin: "China" },
+    { id: "oppo", name: "OPPO", origin: "China" },
+    { id: "vivo", name: "vivo", origin: "China" },
+    { id: "realme", name: "realme", origin: "China" },
+    { id: "oneplus", name: "OnePlus", origin: "China" },
+    { id: "iqoo", name: "iQOO", origin: "China" },
+    { id: "motorola", name: "Motorola", origin: "USA" },
+    { id: "google", name: "Google", origin: "USA" },
+    { id: "nothing", name: "Nothing", origin: "United Kingdom" },
+    { id: "honor", name: "Honor", origin: "China" },
+    { id: "huawei", name: "Huawei", origin: "China" },
+    { id: "nokia", name: "Nokia", origin: "Finland" },
+    { id: "tecno", name: "TECNO", origin: "China" },
+    { id: "infinix", name: "Infinix", origin: "China" },
+    { id: "asus", name: "ASUS", origin: "Taiwan" },
+    { id: "sony", name: "Sony", origin: "Japan" }
+  ];
+
+  const PART_TYPES = [
+    { id: "display", code: "DSP", name: "Displays", singular: "Display Assembly", base: 2450, moq: 1, w: "90 days", blurb: "OEM-compatible LCD/OLED assemblies with frame options where noted. Tested for touch, colour and flex seating." },
+    { id: "battery", code: "BAT", name: "Batteries", singular: "Battery", base: 620, moq: 2, w: "60 days", blurb: "Grade-A cells with protection circuit. Cycle data and capacity printed on pack labels." },
+    { id: "charging-port", code: "CPT", name: "Charging Ports", singular: "Charging Port", base: 160, moq: 5, w: "30 days", blurb: "USB-C / Lightning dock connectors. Pin mapping verified against donor boards." },
+    { id: "charging-board", code: "CDB", name: "Charging Boards", singular: "Charging Board", base: 410, moq: 2, w: "45 days", blurb: "Sub-boards with dock, mic and antenna paths as per model. Ready for board-level swap." },
+    { id: "charging-flex", code: "CFX", name: "Charging Flexes", singular: "Charging Flex", base: 150, moq: 5, w: "30 days", blurb: "Charge-dock flex cables including grounding tabs. Fold radius matches original stack." },
+    { id: "main-flex", code: "MFX", name: "Main Flexes", singular: "Main Flex", base: 360, moq: 2, w: "30 days", blurb: "Motherboard interconnect flexes. Connector pitch and length matched to chassis." },
+    { id: "camera-flex", code: "CMF", name: "Camera Flexes", singular: "Camera Flex", base: 210, moq: 3, w: "30 days", blurb: "Rear/front camera interconnects. Shielding intact; no pinched traces." },
+    { id: "power-flex", code: "PFX", name: "Power Flexes", singular: "Power Flex", base: 130, moq: 5, w: "30 days", blurb: "Side-key power flex with metal dome. Click feel graded on sample jigs." },
+    { id: "volume-flex", code: "VFX", name: "Volume Flexes", singular: "Volume Flex", base: 125, moq: 5, w: "30 days", blurb: "Volume up/down flex assemblies. Pair with power flex where the model shares a cable." },
+    { id: "speaker", code: "SPK", name: "Speakers", singular: "Loudspeaker", base: 180, moq: 5, w: "30 days", blurb: "Bottom loudspeakers. Impedance and housing clips checked before pack-out." },
+    { id: "earpiece", code: "ERP", name: "Earpieces", singular: "Earpiece Speaker", base: 85, moq: 10, w: "30 days", blurb: "Receiver speakers for call audio. Mesh orientation marked on bag." },
+    { id: "microphone", code: "MIC", name: "Microphones", singular: "Microphone", base: 70, moq: 10, w: "30 days", blurb: "Primary and secondary mics. Boot seal included where the chassis requires it." },
+    { id: "vibrator", code: "VIB", name: "Vibration Motors", singular: "Vibration Motor", base: 65, moq: 10, w: "30 days", blurb: "Linear and rotary motors. Throw and noise band sampled per lot." },
+    { id: "camera", code: "CAM", name: "Cameras", singular: "Camera Module", base: 980, moq: 1, w: "45 days", blurb: "Rear and front modules. Autofocus and flex seating tested on donor frames." },
+    { id: "camera-glass", code: "CGL", name: "Camera Glass", singular: "Camera Glass", base: 55, moq: 10, w: "15 days", blurb: "Sapphire/Gorilla camera lenses with adhesive ring. Alignment jig recommended." },
+    { id: "fingerprint", code: "FGP", name: "Fingerprint Parts", singular: "Fingerprint Module", base: 310, moq: 2, w: "30 days", blurb: "In-display, side-mount and rear fingerprint readers. Calibration notes in the listing." },
+    { id: "sensor", code: "SEN", name: "Sensors", singular: "Sensor Assembly", base: 140, moq: 5, w: "30 days", blurb: "Proximity, ambient light, gyro and flex-mounted sensor clusters." },
+    { id: "sim-tray", code: "SIM", name: "SIM Trays", singular: "SIM Tray", base: 40, moq: 10, w: "15 days", blurb: "Colour-matched trays with gasket. Dual and hybrid layouts as per model." },
+    { id: "frame", code: "FRM", name: "Frames", singular: "Middle Frame", base: 890, moq: 1, w: "30 days", blurb: "Mid-frames with pre-installed small parts where listed. Housing screws sold separately." },
+    { id: "housing", code: "HSG", name: "Housings", singular: "Back Housing", base: 1180, moq: 1, w: "30 days", blurb: "Rear housings and full chassis kits. Wireless coil cut-outs preserved." },
+    { id: "connector", code: "CON", name: "Connectors", singular: "Board Connector", base: 48, moq: 20, w: "15 days", blurb: "Board-to-board and dock connectors for microsoldering benches." },
+    { id: "fpc", code: "FPC", name: "FPC Connectors", singular: "FPC Connector", base: 35, moq: 20, w: "15 days", blurb: "FPC/FFC sockets. Pitch and pin count printed on the packet." },
+    { id: "antenna", code: "ANT", name: "Antenna Components", singular: "Antenna Assembly", base: 95, moq: 5, w: "30 days", blurb: "Wi-Fi, 5G and GPS antenna lines, including grounding springs." },
+    { id: "nfc", code: "NFC", name: "NFC Components", singular: "NFC Antenna", base: 150, moq: 5, w: "30 days", blurb: "NFC coils and flex antennas. Keep clear of magnetised packing." },
+    { id: "other", code: "OTH", name: "Other Repair Parts", singular: "Repair Component", base: 90, moq: 5, w: "15 days", blurb: "Buttons, meshes, adhesive, brackets and small hardware used on the bench." }
+  ];
+
+  const MODELS = [
+    { id: "ip16pm", b: "apple", name: "iPhone 16 Pro Max", year: 2024, chip: "A18 Pro", disp: "6.9\" Super Retina XDR OLED", bat: 4685, chg: "USB-C 45W", code: "IP16PM", tier: 3 },
+    { id: "ip16p", b: "apple", name: "iPhone 16 Pro", year: 2024, chip: "A18 Pro", disp: "6.3\" Super Retina XDR OLED", bat: 3582, chg: "USB-C 45W", code: "IP16P", tier: 3 },
+    { id: "ip16", b: "apple", name: "iPhone 16", year: 2024, chip: "A18", disp: "6.1\" Super Retina XDR OLED", bat: 3561, chg: "USB-C 25W", code: "IP16", tier: 2 },
+    { id: "ip15pm", b: "apple", name: "iPhone 15 Pro Max", year: 2023, chip: "A17 Pro", disp: "6.7\" Super Retina XDR OLED", bat: 4441, chg: "USB-C 27W", code: "IP15PM", tier: 3 },
+    { id: "ip15p", b: "apple", name: "iPhone 15 Pro", year: 2023, chip: "A17 Pro", disp: "6.1\" Super Retina XDR OLED", bat: 3274, chg: "USB-C 27W", code: "IP15P", tier: 3 },
+    { id: "ip15", b: "apple", name: "iPhone 15", year: 2023, chip: "A16", disp: "6.1\" Super Retina XDR OLED", bat: 3349, chg: "USB-C 20W", code: "IP15", tier: 2 },
+    { id: "ip15plus", b: "apple", name: "iPhone 15 Plus", year: 2023, chip: "A16", disp: "6.7\" Super Retina XDR OLED", bat: 4383, chg: "USB-C 20W", code: "IP15PL", tier: 2 },
+    { id: "ip14pm", b: "apple", name: "iPhone 14 Pro Max", year: 2022, chip: "A16", disp: "6.7\" Super Retina XDR OLED", bat: 4323, chg: "Lightning 27W", code: "IP14PM", tier: 3 },
+    { id: "ip14p", b: "apple", name: "iPhone 14 Pro", year: 2022, chip: "A16", disp: "6.1\" Super Retina XDR OLED", bat: 3200, chg: "Lightning 27W", code: "IP14P", tier: 3 },
+    { id: "ip14", b: "apple", name: "iPhone 14", year: 2022, chip: "A15", disp: "6.1\" Super Retina XDR OLED", bat: 3279, chg: "Lightning 20W", code: "IP14", tier: 2 },
+    { id: "ip13", b: "apple", name: "iPhone 13", year: 2021, chip: "A15", disp: "6.1\" Super Retina XDR OLED", bat: 3227, chg: "Lightning 20W", code: "IP13", tier: 2 },
+    { id: "ip12", b: "apple", name: "iPhone 12", year: 2020, chip: "A14", disp: "6.1\" Super Retina XDR OLED", bat: 2815, chg: "Lightning 20W", code: "IP12", tier: 1 },
+    { id: "ip11", b: "apple", name: "iPhone 11", year: 2019, chip: "A13", disp: "6.1\" Liquid Retina LCD", bat: 3110, chg: "Lightning 18W", code: "IP11", tier: 1 },
+    { id: "ipse", b: "apple", name: "iPhone SE (2022)", year: 2022, chip: "A15", disp: "4.7\" Retina LCD", bat: 2018, chg: "Lightning 20W", code: "IPSE3", tier: 1 },
+    { id: "s25u", b: "samsung", name: "Galaxy S25 Ultra", year: 2025, chip: "Snapdragon 8 Elite", disp: "6.9\" Dynamic AMOLED 2X", bat: 5000, chg: "USB-C 45W", code: "S25U", tier: 3 },
+    { id: "s24u", b: "samsung", name: "Galaxy S24 Ultra", year: 2024, chip: "Snapdragon 8 Gen 3", disp: "6.8\" Dynamic AMOLED 2X", bat: 5000, chg: "USB-C 45W", code: "S24U", tier: 3 },
+    { id: "s24", b: "samsung", name: "Galaxy S24", year: 2024, chip: "Exynos 2400", disp: "6.2\" Dynamic AMOLED 2X", bat: 4000, chg: "USB-C 25W", code: "S24", tier: 2 },
+    { id: "s23u", b: "samsung", name: "Galaxy S23 Ultra", year: 2023, chip: "Snapdragon 8 Gen 2", disp: "6.8\" Dynamic AMOLED 2X", bat: 5000, chg: "USB-C 45W", code: "S23U", tier: 3 },
+    { id: "s23", b: "samsung", name: "Galaxy S23", year: 2023, chip: "Snapdragon 8 Gen 2", disp: "6.1\" Dynamic AMOLED 2X", bat: 3900, chg: "USB-C 25W", code: "S23", tier: 2 },
+    { id: "a55", b: "samsung", name: "Galaxy A55", year: 2024, chip: "Exynos 1480", disp: "6.6\" Super AMOLED", bat: 5000, chg: "USB-C 25W", code: "A55", tier: 1 },
+    { id: "a54", b: "samsung", name: "Galaxy A54", year: 2023, chip: "Exynos 1380", disp: "6.4\" Super AMOLED", bat: 5000, chg: "USB-C 25W", code: "A54", tier: 1 },
+    { id: "a35", b: "samsung", name: "Galaxy A35", year: 2024, chip: "Exynos 1380", disp: "6.6\" Super AMOLED", bat: 5000, chg: "USB-C 25W", code: "A35", tier: 1 },
+    { id: "a15", b: "samsung", name: "Galaxy A15", year: 2024, chip: "Helio G99", disp: "6.5\" Super AMOLED", bat: 5000, chg: "USB-C 25W", code: "A15", tier: 1 },
+    { id: "m34", b: "samsung", name: "Galaxy M34", year: 2023, chip: "Exynos 1280", disp: "6.5\" Super AMOLED", bat: 6000, chg: "USB-C 25W", code: "M34", tier: 1 },
+    { id: "mi14", b: "xiaomi", name: "Xiaomi 14", year: 2024, chip: "Snapdragon 8 Gen 3", disp: "6.36\" AMOLED", bat: 4610, chg: "USB-C 90W", code: "MI14", tier: 3 },
+    { id: "mi13t", b: "xiaomi", name: "Xiaomi 13T", year: 2023, chip: "Dimensity 8200 Ultra", disp: "6.67\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "MI13T", tier: 2 },
+    { id: "rn13p", b: "redmi", name: "Redmi Note 13 Pro", year: 2024, chip: "Snapdragon 7s Gen 2", disp: "6.67\" AMOLED", bat: 5100, chg: "USB-C 67W", code: "RN13P", tier: 2 },
+    { id: "rn13", b: "redmi", name: "Redmi Note 13", year: 2024, chip: "Dimensity 6080", disp: "6.67\" AMOLED", bat: 5000, chg: "USB-C 33W", code: "RN13", tier: 1 },
+    { id: "rn12", b: "redmi", name: "Redmi Note 12", year: 2023, chip: "Snapdragon 4 Gen 1", disp: "6.67\" AMOLED", bat: 5000, chg: "USB-C 33W", code: "RN12", tier: 1 },
+    { id: "r13c", b: "redmi", name: "Redmi 13C", year: 2023, chip: "Helio G85", disp: "6.74\" IPS LCD", bat: 5000, chg: "USB-C 18W", code: "R13C", tier: 1 },
+    { id: "px6p", b: "poco", name: "POCO X6 Pro", year: 2024, chip: "Dimensity 8300 Ultra", disp: "6.67\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "PX6P", tier: 2 },
+    { id: "pf5", b: "poco", name: "POCO F5", year: 2023, chip: "Snapdragon 7+ Gen 2", disp: "6.67\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "PF5", tier: 2 },
+    { id: "reno11", b: "oppo", name: "OPPO Reno 11", year: 2024, chip: "Dimensity 8200", disp: "6.7\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "RENO11", tier: 2 },
+    { id: "a78", b: "oppo", name: "OPPO A78", year: 2023, chip: "Snapdragon 695", disp: "6.43\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "A78", tier: 1 },
+    { id: "v30", b: "vivo", name: "vivo V30", year: 2024, chip: "Snapdragon 7 Gen 3", disp: "6.78\" AMOLED", bat: 5000, chg: "USB-C 80W", code: "V30", tier: 2 },
+    { id: "y200", b: "vivo", name: "vivo Y200", year: 2024, chip: "Snapdragon 4 Gen 2", disp: "6.67\" AMOLED", bat: 4800, chg: "USB-C 44W", code: "Y200", tier: 1 },
+    { id: "rm12p", b: "realme", name: "realme 12 Pro", year: 2024, chip: "Snapdragon 7s Gen 2", disp: "6.7\" AMOLED", bat: 5000, chg: "USB-C 67W", code: "RM12P", tier: 2 },
+    { id: "c67", b: "realme", name: "realme C67", year: 2024, chip: "Snapdragon 685", disp: "6.72\" IPS LCD", bat: 5000, chg: "USB-C 33W", code: "C67", tier: 1 },
+    { id: "op12", b: "oneplus", name: "OnePlus 12", year: 2024, chip: "Snapdragon 8 Gen 3", disp: "6.82\" LTPO AMOLED", bat: 5400, chg: "USB-C 100W", code: "OP12", tier: 3 },
+    { id: "nordce4", b: "oneplus", name: "OnePlus Nord CE4", year: 2024, chip: "Snapdragon 7 Gen 3", disp: "6.7\" AMOLED", bat: 5500, chg: "USB-C 100W", code: "CE4", tier: 2 },
+    { id: "z9", b: "iqoo", name: "iQOO Z9", year: 2024, chip: "Dimensity 7200", disp: "6.72\" AMOLED", bat: 5000, chg: "USB-C 44W", code: "Z9", tier: 2 },
+    { id: "ed50", b: "motorola", name: "Motorola Edge 50 Fusion", year: 2024, chip: "Snapdragon 7s Gen 2", disp: "6.7\" pOLED", bat: 5000, chg: "USB-C 68W", code: "ED50", tier: 2 },
+    { id: "g84", b: "motorola", name: "Motorola G84", year: 2023, chip: "Snapdragon 695", disp: "6.5\" pOLED", bat: 5000, chg: "USB-C 30W", code: "G84", tier: 1 },
+    { id: "px8p", b: "google", name: "Pixel 8 Pro", year: 2023, chip: "Tensor G3", disp: "6.7\" LTPO OLED", bat: 5050, chg: "USB-C 30W", code: "PX8P", tier: 3 },
+    { id: "px8", b: "google", name: "Pixel 8", year: 2023, chip: "Tensor G3", disp: "6.2\" OLED", bat: 4575, chg: "USB-C 27W", code: "PX8", tier: 2 },
+    { id: "np2a", b: "nothing", name: "Nothing Phone (2a)", year: 2024, chip: "Dimensity 7200 Pro", disp: "6.7\" AMOLED", bat: 5000, chg: "USB-C 45W", code: "NP2A", tier: 2 },
+    { id: "h200", b: "honor", name: "Honor 200", year: 2024, chip: "Snapdragon 7 Gen 3", disp: "6.7\" AMOLED", bat: 5200, chg: "USB-C 66W", code: "H200", tier: 2 },
+    { id: "nv12", b: "huawei", name: "Huawei nova 12", year: 2023, chip: "Kirin 8000", disp: "6.7\" OLED", bat: 4600, chg: "USB-C 66W", code: "NV12", tier: 2 },
+    { id: "g42", b: "nokia", name: "Nokia G42", year: 2023, chip: "Snapdragon 480+", disp: "6.56\" IPS LCD", bat: 5000, chg: "USB-C 20W", code: "G42", tier: 1 },
+    { id: "sp20", b: "tecno", name: "TECNO Spark 20", year: 2023, chip: "Helio G85", disp: "6.6\" IPS LCD", bat: 5000, chg: "USB-C 18W", code: "SP20", tier: 1 },
+    { id: "hot40", b: "infinix", name: "Infinix Hot 40", year: 2023, chip: "Helio G99", disp: "6.78\" IPS LCD", bat: 5000, chg: "USB-C 18W", code: "HOT40", tier: 1 },
+    { id: "rog8", b: "asus", name: "ASUS ROG Phone 8", year: 2024, chip: "Snapdragon 8 Gen 3", disp: "6.78\" AMOLED", bat: 5500, chg: "USB-C 65W", code: "ROG8", tier: 3 },
+    { id: "xp1v", b: "sony", name: "Xperia 1 V", year: 2023, chip: "Snapdragon 8 Gen 2", disp: "6.5\" 4K OLED", bat: 5000, chg: "USB-C 30W", code: "XP1V", tier: 3 }
+  ];
+
+  const COMPAT = [
+    { types: ["charging-port", "charging-flex"], models: ["ip15", "ip15plus"] },
+    { types: ["charging-port", "charging-flex", "antenna"], models: ["ip15p", "ip15pm"] },
+    { types: ["charging-port"], models: ["ip14", "ip14p"] },
+    { types: ["charging-port", "antenna"], models: ["ip14p", "ip14pm"] },
+    { types: ["nfc", "antenna"], models: ["ip16", "ip16p", "ip16pm"] },
+    { types: ["charging-port", "charging-board"], models: ["a54", "a55", "a35"] },
+    { types: ["battery"], models: ["a54", "a55"] },
+    { types: ["charging-port"], models: ["s24", "s24u"] },
+    { types: ["nfc"], models: ["s23", "s23u", "s24", "s24u"] },
+    { types: ["charging-port", "charging-flex"], models: ["rn13", "rn13p"] },
+    { types: ["speaker", "earpiece"], models: ["rn12", "rn13"] },
+    { types: ["charging-port"], models: ["px6p", "pf5"] },
+    { types: ["charging-board"], models: ["reno11", "a78"] },
+    { types: ["sim-tray"], models: ["c67", "r13c"] },
+    { types: ["antenna", "nfc"], models: ["px8", "px8p"] },
+    { types: ["charging-port"], models: ["op12", "nordce4"] },
+    { types: ["microphone", "vibrator"], models: ["g84", "ed50"] },
+    { types: ["fpc", "connector"], models: ["hot40", "sp20"] }
+  ];
+
+  const GRADES = ["OEM Compatible", "Premium Aftermarket", "Original Pull"];
+  const BMUL = { apple: 2.35, samsung: 1.55, google: 1.7, sony: 1.65, asus: 1.5, oneplus: 1.35, xiaomi: 1.12, nothing: 1.2, huawei: 1.25, honor: 1.1, vivo: 1.08, oppo: 1.08, iqoo: 1.05, poco: 1.02, redmi: 0.95, realme: 0.95, motorola: 1.05, nokia: 0.9, tecno: 0.82, infinix: 0.8 };
+
+  function hash(s) {
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+
+  function compatFor(modelId, typeId) {
+    const g = COMPAT.find((x) => x.types.indexOf(typeId) !== -1 && x.models.indexOf(modelId) !== -1);
+    return g ? g.models.slice() : [modelId];
+  }
+
+  let PRODUCTS = [];
+  let BY_ID = {};
+
+  function compileCatalogue() {
+    const out = [];
+    let n = 1;
+    MODELS.forEach((m) => {
+      PART_TYPES.forEach((t) => {
+        const id = "TE" + String(n).padStart(5, "0");
+        const sku = "TE-" + m.code + "-" + t.code;
+        const hv = hash(sku);
+        const price = Math.round(t.base * (BMUL[m.b] || 1) * (1 + m.tier * 0.12) * (1 + (hv % 17) / 100));
+        const stockN = hv % 11 === 0 ? 0 : hv % 9 === 0 ? 4 + (hv % 6) : 18 + (hv % 220);
+        const stock = stockN === 0 ? "out" : stockN < 12 ? "low" : "in";
+        const grade = GRADES[hv % 3];
+        const models = compatFor(m.id, t.id);
+        const p = {
+          id, sku, name: m.name + " " + t.singular, brand: m.b, model: m.id, models, type: t.id,
+          price, stock, qty: stockN, grade, moq: t.moq, warranty: t.w, year: m.year,
+          blurb: t.blurb, unit: "pcs",
+          specs: {
+            "Brand": brandName(m.b),
+            "Model": m.name,
+            "Category": t.name,
+            "Grade": grade,
+            "SKU": sku,
+            "Chipset (device)": m.chip,
+            "Device display": m.disp,
+            "Device battery": m.bat + " mAh",
+            "Device charging": m.chg,
+            "Minimum order": t.moq + " " + (t.moq > 1 ? "pcs" : "pc"),
+            "Warranty": t.w,
+            "Origin packing": "Trade bag / anti-static"
+          }
+        };
+        out.push(p);
+        n += 1;
+      });
+    });
+    PRODUCTS = out;
+    BY_ID = {};
+    out.forEach((p) => { BY_ID[p.id] = p; });
+  }
+
+  function brandName(id) { const b = BRANDS.find((x) => x.id === id); return b ? b.name : id; }
+  function modelName(id) { const m = MODELS.find((x) => x.id === id); return m ? m.name : id; }
+  function typeName(id) { const t = PART_TYPES.find((x) => x.id === id); return t ? t.name : id; }
+  function typeOf(id) { return PART_TYPES.find((x) => x.id === id); }
+
+  const LS = {
+    users: "te_users_v2",
+    session: "te_session_v2",
+    mute: "te_mute_v2"
+  };
+
+  function read(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; }
+  }
+  function write(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+  function ukey(base) {
+    const u = currentUser();
+    return base + "_" + (u ? u.id : "guest");
+  }
+
+  function users() { return read(LS.users, []); }
+  function saveUsers(list) { write(LS.users, list); }
+  function currentUser() {
+    const id = read(LS.session, null);
+    if (!id) return null;
+    return users().find((u) => u.id === id) || null;
+  }
+  function setSession(id) { write(LS.session, id); }
+
+  async function sha256(text) {
+    try {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("te::" + text));
+      return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+    } catch (e) {
+      let h = 2166136261;
+      const s = "te::" + text;
+      for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+      return "x" + (h >>> 0).toString(16) + s.length;
+    }
+  }
+
+  function favs() { return read(ukey("te_fav"), []); }
+  function saveFavs(v) { write(ukey("te_fav"), v); }
+  function enq() { return read(ukey("te_enq"), []); }
+  function saveEnq(v) { write(ukey("te_enq"), v); }
+  function recent() { return read(ukey("te_recent"), []); }
+  function saveRecent(v) { write(ukey("te_recent"), v); }
+  function submitted() { return read(ukey("te_sub"), []); }
+  function saveSubmitted(v) { write(ukey("te_sub"), v); }
+
+  function adoptGuest(userId) {
+    ["te_fav", "te_recent"].forEach((base) => {
+      const g = read(base + "_guest", []);
+      if (!g.length) return;
+      write(base + "_" + userId, Array.from(new Set(g.concat(read(base + "_" + userId, [])))));
+      write(base + "_guest", []);
+    });
+    const ge = read("te_enq_guest", []);
+    if (ge.length) {
+      const map = {};
+      read("te_enq_" + userId, []).concat(ge).forEach((x) => {
+        if (!x || !x.id) return;
+        map[x.id] = { id: x.id, qty: (map[x.id] ? map[x.id].qty : 0) + (x.qty || 1) };
+      });
+      write("te_enq_" + userId, Object.keys(map).map((k) => map[k]));
+      write("te_enq_guest", []);
+    }
+  }
+
+  const AudioEng = {
+    ctx: null,
+    muted: read(LS.mute, true),
+    ensure() {
+      if (!this.ctx) this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      if (this.ctx.state === "suspended") this.ctx.resume();
+    },
+    tone(freq, dur, type, gain) {
+      if (this.muted) return;
+      try {
+        this.ensure();
+        const o = this.ctx.createOscillator();
+        const g = this.ctx.createGain();
+        o.type = type || "sine";
+        o.frequency.value = freq;
+        g.gain.setValueAtTime(gain || 0.035, this.ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + dur);
+        o.connect(g); g.connect(this.ctx.destination);
+        o.start(); o.stop(this.ctx.currentTime + dur);
+      } catch (e) {}
+    },
+    click() { this.tone(740, 0.06, "sine", 0.03); },
+    add() { this.tone(520, 0.08, "triangle", 0.04); setTimeout(() => this.tone(780, 0.1, "triangle", 0.03), 70); },
+    welcome() { [392, 494, 587, 784].forEach((f, i) => setTimeout(() => this.tone(f, 0.18, "sine", 0.04), i * 110)); },
+    toggle() { this.muted = !this.muted; write(LS.mute, this.muted); this.click(); renderChrome(); toast(this.muted ? "Sound off" : "Sound on"); }
+  };
+
+  const state = {
+    view: "home",
+    productId: null,
+    brandId: null,
+    q: "",
+    brand: "",
+    model: "",
+    type: "",
+    stock: "",
+    grade: "",
+    minP: "",
+    maxP: "",
+    sort: "featured",
+    page: 1,
+    per: 12,
+    qty: 1,
+    drawer: null
+  };
+
+  function toast(msg) {
+    const t = document.createElement("div");
+    t.className = "toast";
+    t.textContent = msg;
+    $("#toasts").appendChild(t);
+    setTimeout(() => t.remove(), 2800);
+  }
+
+  function go(path) {
+    if (!path.startsWith("#")) path = "#/" + path.replace(/^\//, "");
+    location.hash = path;
+  }
+
+  function parseHash() {
+    const raw = (location.hash || "#/").slice(1);
+    const [path, qs] = raw.split("?");
+    const parts = path.split("/").filter(Boolean);
+    const params = new URLSearchParams(qs || "");
+    state.productId = null;
+    state.brandId = null;
+    const root = parts[0] || "home";
+    const known = ["home","catalogue","product","about","why","contact","privacy","terms","disclaimer","profile","favourites","enquiries","login","signup","brand"];
+    state.view = known.indexOf(root) === -1 ? "home" : root;
+    if (root === "product") state.productId = parts[1];
+    if (root === "brand") { state.brandId = parts[1]; state.view = "catalogue"; }
+    if (root === "catalogue") state.view = "catalogue";
+    if (state.view === "catalogue") {
+      state.q = params.get("q") || "";
+      state.brand = params.get("brand") || state.brandId || "";
+      state.model = params.get("model") || "";
+      state.type = params.get("type") || "";
+      state.stock = params.get("stock") || "";
+      state.grade = params.get("grade") || "";
+      state.minP = params.get("min") || "";
+      state.maxP = params.get("max") || "";
+      state.sort = params.get("sort") || "featured";
+      state.page = parseInt(params.get("page") || "1", 10) || 1;
+    }
+  }
+
+  function catalogueQuery() {
+    const p = new URLSearchParams();
+    if (state.q) p.set("q", state.q);
+    if (state.brand) p.set("brand", state.brand);
+    if (state.model) p.set("model", state.model);
+    if (state.type) p.set("type", state.type);
+    if (state.stock) p.set("stock", state.stock);
+    if (state.grade) p.set("grade", state.grade);
+    if (state.minP) p.set("min", state.minP);
+    if (state.maxP) p.set("max", state.maxP);
+    if (state.sort !== "featured") p.set("sort", state.sort);
+    if (state.page > 1) p.set("page", String(state.page));
+    const s = p.toString();
+    return "#/catalogue" + (s ? "?" + s : "");
+  }
+
+  function logoSvg() {
+    return '<svg viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="none" stroke="#ff6a00" stroke-width="1.6"/><path d="M8 8h18v5h-6.5v13h-5V13H8z" fill="#ff6a00"/></svg>';
+  }
+
+  function art(p) {
+    const pal = ["#ff6a00", "#c9c2b6", "#3ecf8e", "#6e6a62"];
+    const c = pal[hash(p.id) % pal.length];
+    const shapes = {
+      display: '<rect x="38" y="18" width="44" height="84" rx="6" fill="none" stroke="'+c+'" stroke-width="2"/><rect x="44" y="28" width="32" height="58" rx="2" fill="'+c+'" opacity=".25"/>',
+      battery: '<rect x="40" y="30" width="40" height="64" rx="6" fill="none" stroke="'+c+'" stroke-width="2"/><rect x="52" y="22" width="16" height="10" fill="'+c+'"/><rect x="46" y="70" width="28" height="16" fill="'+c+'" opacity=".35"/>',
+      camera: '<circle cx="60" cy="58" r="22" fill="none" stroke="'+c+'" stroke-width="2"/><circle cx="60" cy="58" r="10" fill="'+c+'" opacity=".35"/>',
+      default: '<rect x="30" y="30" width="60" height="60" rx="8" fill="none" stroke="'+c+'" stroke-width="2"/><path d="M40 60h40" stroke="'+c+'" stroke-width="2"/>'
+    };
+    const g = shapes[p.type] || shapes.default;
+    return '<svg viewBox="0 0 120 120" aria-hidden="true">'+g+'</svg>';
+  }
+
+  function stockBadge(p) {
+    if (p.stock === "in") return '<span class="badge ok">In stock · '+p.qty+'</span>';
+    if (p.stock === "low") return '<span class="badge low">Low stock · '+p.qty+'</span>';
+    return '<span class="badge out">Backorder</span>';
+  }
+
+  function isFav(id) { return favs().indexOf(id) !== -1; }
+
+  function productCard(p) {
+    return '<article class="card">'
+      + '<a class="p-art" href="#/product/'+p.id+'" data-go="product/'+p.id+'">'+art(p)+'</a>'
+      + '<div class="p-body">'
+      + '<div class="p-sku">'+esc(p.sku)+'</div>'
+      + '<a class="p-name" href="#/product/'+p.id+'">'+esc(p.name)+'</a>'
+      + '<div class="p-meta"><span class="price">'+fmt(p.price)+'</span>'+stockBadge(p)+'</div>'
+      + '<div class="p-actions">'
+      + '<button class="heart'+(isFav(p.id)?" on":"")+'" data-act="fav" data-id="'+p.id+'" aria-label="Favourite">'+ICONS.heart+'</button>'
+      + '<button class="btn btn-p btn-sm" data-act="add" data-id="'+p.id+'" style="flex:1">Add to enquiry</button>'
+      + '</div></div></article>';
+  }
+
+  function requireUser(next) {
+    if (currentUser()) return true;
+    toast("Sign in to use this");
+    go("login");
+    return false;
+  }
+
+  function addRecent(id) {
+    const r = recent().filter((x) => x !== id);
+    r.unshift(id);
+    saveRecent(r.slice(0, 12));
+  }
+
+  function filtered() {
+    let list = PRODUCTS.slice();
+    const q = (state.q || "").trim().toLowerCase();
+    if (q) {
+      list = list.filter((p) => (p.name + " " + p.sku + " " + brandName(p.brand) + " " + modelName(p.model) + " " + p.grade).toLowerCase().indexOf(q) !== -1);
+    }
+    if (state.brand) list = list.filter((p) => p.brand === state.brand);
+    if (state.model) list = list.filter((p) => p.models.indexOf(state.model) !== -1 || p.model === state.model);
+    if (state.type) list = list.filter((p) => p.type === state.type);
+    if (state.stock) list = list.filter((p) => p.stock === state.stock);
+    if (state.grade) list = list.filter((p) => p.grade === state.grade);
+    const minP = parseFloat(state.minP); const maxP = parseFloat(state.maxP);
+    if (!isNaN(minP) && state.minP !== "") list = list.filter((p) => p.price >= minP);
+    if (!isNaN(maxP) && state.maxP !== "") list = list.filter((p) => p.price <= maxP);
+    if (state.sort === "price-asc") list.sort((a, b) => a.price - b.price);
+    else if (state.sort === "price-desc") list.sort((a, b) => b.price - a.price);
+    else if (state.sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+    else if (state.sort === "stock") list.sort((a, b) => (a.stock === "in" ? 0 : a.stock === "low" ? 1 : 2) - (b.stock === "in" ? 0 : b.stock === "low" ? 1 : 2));
+    else list.sort((a, b) => (a.stock === "out") - (b.stock === "out") || b.year - a.year);
+    return list;
+  }
+
+  function renderChrome() {
+    const u = currentUser();
+    const eN = enq().reduce((s, x) => s + x.qty, 0);
+    const fN = favs().length;
+    const nav = [
+      ["home", "Home"], ["catalogue", "Catalogue"], ["why", "Why us"], ["about", "About"], ["contact", "Contact"]
+    ].map(([id, l]) => '<a href="#/'+id+'" class="'+(state.view===id?"on":"")+'">'+l+'</a>').join("");
+    const av = u && u.avatar
+      ? '<img src="'+u.avatar+'" alt="">'
+      : (u ? esc(u.name.charAt(0).toUpperCase()) : ICONS.user);
+    $("#hdr").innerHTML =
+      '<a class="brand" href="#/home">'+logoSvg()+'<div class="brand-name">Trusted Enterprises<span>Wholesale parts</span></div></a>'
+      + '<nav class="desk">'+nav+'</nav>'
+      + '<div class="search-wrap" id="dsearch"><span class="search-ico">'+ICONS.search+'</span>'
+      + '<input id="q" type="search" placeholder="Search SKU, model, part…" value="'+esc(state.q)+'" />'
+      + (state.q ? '<button class="search-clear" data-act="clearq" aria-label="Clear">'+ICONS.x+'</button>' : "")
+      + '</div>'
+      + '<div class="hdr-actions">'
+      + '<button class="icon-btn" data-act="mute" aria-label="Sound">'+(AudioEng.muted?ICONS.mute:ICONS.vol)+'</button>'
+      + '<a class="icon-btn" href="#/favourites" aria-label="Favourites">'+ICONS.heart+(fN?'<span class="dot">'+fN+'</span>':'')+'</a>'
+      + '<a class="icon-btn" href="#/enquiries" aria-label="Enquiry list">'+ICONS.bag+(eN?'<span class="dot">'+(eN>99?"99+":eN)+'</span>':'')+'</a>'
+      + '<a class="icon-btn" href="'+(u?"#/profile":"#/login")+'" aria-label="Account"><span class="avatar-btn">'+av+'</span></a>'
+      + '<button class="icon-btn menu-btn" data-act="menu" aria-label="Menu">'+ICONS.menu+'</button>'
+      + '</div>';
+    $("#msearch").innerHTML = '<span class="search-ico">'+ICONS.search+'</span><input id="qm" type="search" placeholder="Search parts…" value="'+esc(state.q)+'" />';
+    $("#rail").innerHTML = "<span><b>B2B</b> trade desk</span><span>Owner <b>Shahnawaz Mirza</b></span><span>Displays · batteries · charging · flexes · cameras</span><span>Indicative wholesale INR</span><span>Compatibility mapped per SKU</span>";
+    $("#ftr").innerHTML = '<div class="wrap"><div class="f-grid">'
+      + '<div>'+logoSvg()+'<p style="margin-top:12px">Trusted Enterprises supplies graded mobile spare parts to service centres, retailers and independent benches.</p><p>Owner: <strong style="color:var(--fg)">Shahnawaz Mirza</strong></p></div>'
+      + '<div><h4>Catalogue</h4><a href="#/catalogue">All parts</a><a href="#/catalogue?type=display">Displays</a><a href="#/catalogue?type=battery">Batteries</a><a href="#/catalogue?type=charging-port">Charging</a><a href="#/favourites">Favourites</a></div>'
+      + '<div><h4>Company</h4><a href="#/about">About us</a><a href="#/why">Why us</a><a href="#/contact">Contact</a><a href="#/enquiries">Enquiry list</a></div>'
+      + '<div><h4>Legal</h4><a href="#/privacy">Privacy policy</a><a href="#/terms">Terms & conditions</a><a href="#/disclaimer">Disclaimer</a></div>'
+      + '</div><div class="f-bottom"><span>© '+new Date().getFullYear()+' Trusted Enterprises. All rights reserved.</span><span>Standalone trade catalogue · data stays in this browser</span></div></div>';
+  }
+
+  function viewHome() {
+    const featured = PRODUCTS.filter((p) => p.stock === "in" && p.type === "display").slice(0, 8);
+    const brands = BRANDS.map((b) => {
+      const n = MODELS.filter((m) => m.b === b.id).length;
+      return '<a class="card b-card" href="#/brand/'+b.id+'"><strong>'+esc(b.name)+'</strong><small>'+n+' models · '+esc(b.origin)+'</small></a>';
+    }).join("");
+    const cats = PART_TYPES.map((t) => '<a class="card c-card" href="#/catalogue?type='+t.id+'">'+art({id:t.id,type:t.id})+'<strong>'+esc(t.name)+'</strong><small>'+esc(t.singular)+'</small></a>').join("");
+    return '<div class="wrap page">'
+      + '<section class="hero"><div>'
+      + '<div class="kicker">Trade catalogue · Version 2</div>'
+      + '<h1>Wholesale mobile parts, <em>mapped</em> to the bench.</h1>'
+      + '<p class="lede">Displays, batteries, charging assemblies, flexes, cameras and the small hardware a repair shop actually reorders. Built for service centres — not consumer retail.</p>'
+      + '<div class="hero-actions"><a class="btn btn-p" href="#/catalogue">Browse catalogue</a><a class="btn btn-g" href="#/signup">Open trade account</a></div>'
+      + '<p class="owner-line">Proprietor <strong>Shahnawaz Mirza</strong> · Trusted Enterprises</p>'
+      + '</div><div class="hero-panel">'
+      + '<div class="stat"><b>'+BRANDS.length+'</b><span>major brands</span></div>'
+      + '<div class="stat"><b>'+MODELS.length+'</b><span>phone models</span></div>'
+      + '<div class="stat"><b>'+PRODUCTS.length.toLocaleString("en-IN")+'</b><span>active SKUs</span></div>'
+      + '<div class="stat"><b>'+PART_TYPES.length+'</b><span>part families</span></div>'
+      + '</div></section>'
+      + '<section class="section"><div class="sec-head"><div><h2>Brands</h2><p>Filter the floor by marque.</p></div><a class="btn btn-g btn-sm" href="#/catalogue">All parts</a></div><div class="brand-grid">'+brands+'</div></section>'
+      + '<section class="section"><div class="sec-head"><div><h2>Part families</h2><p>From assemblies to FPC sockets.</p></div></div><div class="cat-grid">'+cats+'</div></section>'
+      + '<section class="section"><div class="sec-head"><div><h2>In-stock displays</h2><p>A slice of live wholesale pricing.</p></div></div><div class="prod-grid">'+featured.map(productCard).join("")+'</div></section>'
+      + '<section class="section"><div class="sec-head"><div><h2>Why benches stay</h2></div><a class="btn btn-g btn-sm" href="#/why">Read more</a></div>'
+      + '<div class="why-grid">'
+      + '<div class="why"><h3>Compatibility first</h3><p>Each SKU lists every model that shares the part — not just the phone on the bag.</p></div>'
+      + '<div class="why"><h3>Graded lots</h3><p>OEM compatible, premium aftermarket or original pull. The grade is on the card, not in a footnote.</p></div>'
+      + '<div class="why"><h3>Trade quantities</h3><p>MOQ and live stock on every line. Build an enquiry with quantities, then send it from this browser.</p></div>'
+      + '<div class="why"><h3>Owner on the desk</h3><p>Shahnawaz Mirza runs the house. You are not talking to a call-centre script.</p></div>'
+      + '</div></section></div>';
+  }
+
+  function filterSide() {
+    const models = MODELS.filter((m) => !state.brand || m.b === state.brand);
+    return '<aside class="side">'
+      + '<h3>Brand</h3><select id="fbrand"><option value="">All brands</option>'+BRANDS.map((b)=>'<option value="'+b.id+'"'+(state.brand===b.id?" selected":"")+'>'+esc(b.name)+'</option>').join("")+'</select>'
+      + '<h3>Phone model</h3><select id="fmodel"><option value="">All models</option>'+models.map((m)=>'<option value="'+m.id+'"'+(state.model===m.id?" selected":"")+'>'+esc(m.name)+'</option>').join("")+'</select>'
+      + '<h3>Part category</h3><select id="ftype"><option value="">All categories</option>'+PART_TYPES.map((t)=>'<option value="'+t.id+'"'+(state.type===t.id?" selected":"")+'>'+esc(t.name)+'</option>').join("")+'</select>'
+      + '<h3>Stock</h3><select id="fstock"><option value="">Any status</option><option value="in"'+(state.stock==="in"?" selected":"")+'>In stock</option><option value="low"'+(state.stock==="low"?" selected":"")+'>Low stock</option><option value="out"'+(state.stock==="out"?" selected":"")+'>Backorder</option></select>'
+      + '<h3>Grade</h3><select id="fgrade"><option value="">Any grade</option>'+GRADES.map((g)=>'<option'+(state.grade===g?" selected":"")+'>'+g+'</option>').join("")+'</select>'
+      + '<h3>Price (INR)</h3><div class="range"><input id="fmin" type="number" min="0" placeholder="Min" value="'+esc(state.minP)+'" /><input id="fmax" type="number" min="0" placeholder="Max" value="'+esc(state.maxP)+'" /></div>'
+      + '<div style="margin-top:16px;display:grid;gap:8px"><button class="btn btn-p btn-sm" data-act="applyf">Apply filters</button><button class="btn btn-g btn-sm" data-act="resetf">Reset</button></div>'
+      + '</aside>';
+  }
+
+  function viewCatalogue() {
+    const list = filtered();
+    const pages = Math.max(1, Math.ceil(list.length / state.per));
+    if (state.page > pages) state.page = pages;
+    const slice = list.slice((state.page - 1) * state.per, state.page * state.per);
+    const pager = Array.from({ length: pages }, (_, i) => i + 1).filter((n) => n === 1 || n === pages || Math.abs(n - state.page) < 3);
+    let pagerHtml = "";
+    pager.forEach((n, i) => {
+      if (i && n - pager[i - 1] > 1) pagerHtml += "<span class='faint'>…</span>";
+      pagerHtml += '<button data-act="page" data-n="'+n+'" class="'+(n===state.page?"on":"")+'">'+n+'</button>';
+    });
+    const title = state.brandId ? brandName(state.brandId) : "Catalogue";
+    return '<div class="wrap page"><div class="sec-head"><div><div class="kicker">Wholesale</div><h2>'+esc(title)+'</h2><p class="muted">'+list.length.toLocaleString("en-IN")+' parts · advanced search and compatibility filters</p></div>'
+      + '<select id="fsort"><option value="featured">Featured</option><option value="price-asc"'+(state.sort==="price-asc"?" selected":"")+'>Price · low</option><option value="price-desc"'+(state.sort==="price-desc"?" selected":"")+'>Price · high</option><option value="name"'+(state.sort==="name"?" selected":"")+'>Name</option><option value="stock"'+(state.sort==="stock"?" selected":"")+'>Stock first</option></select></div>'
+      + '<div class="filters">'+filterSide()+'<div>'
+      + (slice.length ? '<div class="prod-grid">'+slice.map(productCard).join("")+'</div><div class="pager">'+pagerHtml+'</div>' : '<div class="empty">No parts match these filters.</div>')
+      + '</div></div></div>';
+  }
+
+  function viewProduct() {
+    const p = BY_ID[state.productId];
+    if (!p) return '<div class="wrap page"><div class="empty">Part not found. <a href="#/catalogue">Return to catalogue</a></div></div>';
+    addRecent(p.id);
+    const compat = p.models.map((id) => '<a class="chip" href="#/catalogue?model='+id+'">'+esc(modelName(id))+'</a>').join("");
+    const related = PRODUCTS.filter((x) => x.id !== p.id && (x.model === p.model || x.type === p.type) && x.brand === p.brand).slice(0, 4);
+    const rec = recent().map((id) => BY_ID[id]).filter(Boolean).filter((x) => x.id !== p.id).slice(0, 4);
+    const specs = Object.keys(p.specs).map((k) => '<tr><th>'+esc(k)+'</th><td>'+esc(p.specs[k])+'</td></tr>').join("");
+    const m = MODELS.find((x) => x.id === p.model);
+    return '<div class="wrap page"><div class="crumbs"><a href="#/home">Home</a><span>/</span><a href="#/catalogue">Catalogue</a><span>/</span><a href="#/catalogue?type='+p.type+'">'+esc(typeName(p.type))+'</a><span>/</span><span>'+esc(p.sku)+'</span></div>'
+      + '<div class="product"><div class="gallery">'+art(p)+'</div><div>'
+      + '<div class="kicker">'+esc(brandName(p.brand))+' · '+esc(p.grade)+'</div>'
+      + '<h2>'+esc(p.name)+'</h2>'
+      + '<p class="muted" style="margin:10px 0 16px">SKU '+esc(p.sku)+' · '+esc(p.warranty)+' replacement warranty · MOQ '+p.moq+'</p>'
+      + '<div class="p-meta" style="margin-bottom:18px"><span class="price" style="font-size:1.6rem">'+fmt(p.price)+'</span>'+stockBadge(p)+'</div>'
+      + '<p class="muted">'+esc(p.blurb)+'</p>'
+      + '<div style="display:flex;gap:10px;flex-wrap:wrap;margin:22px 0;align-items:center">'
+      + '<div class="qty"><button data-act="qty" data-d="-1">'+ICONS.minus+'</button><input id="pqty" type="number" min="1" value="'+state.qty+'" /><button data-act="qty" data-d="1">'+ICONS.plus+'</button></div>'
+      + '<button class="btn btn-p" data-act="add" data-id="'+p.id+'">Add to enquiry</button>'
+      + '<button class="heart'+(isFav(p.id)?" on":"")+'" data-act="fav" data-id="'+p.id+'">'+ICONS.heart+'</button>'
+      + '</div>'
+      + '<h3 style="margin-top:8px">Compatible devices</h3>'
+      + '<p class="faint" style="font-size:13px">The same part seats on the models below. Always confirm board revision on the bench.</p>'
+      + '<div class="compat">'+compat+'</div>'
+      + (m ? '<table class="spec"><tbody><tr><th>Device year</th><td>'+m.year+'</td></tr><tr><th>Chipset</th><td>'+esc(m.chip)+'</td></tr><tr><th>Display</th><td>'+esc(m.disp)+'</td></tr><tr><th>Battery</th><td>'+m.bat+' mAh</td></tr><tr><th>Charging</th><td>'+esc(m.chg)+'</td></tr>'+specs+'</tbody></table>' : '<table class="spec"><tbody>'+specs+'</tbody></table>')
+      + '</div></div>'
+      + (related.length ? '<section class="section"><div class="sec-head"><h2>Related parts</h2></div><div class="prod-grid">'+related.map(productCard).join("")+'</div></section>' : "")
+      + (rec.length ? '<section class="section"><div class="sec-head"><h2>Recently viewed</h2></div><div class="prod-grid">'+rec.map(productCard).join("")+'</div></section>' : "")
+      + '</div>';
+  }
+
+  function viewAbout() {
+    return '<div class="wrap page"><div class="kicker">Company</div><h2>About Trusted Enterprises</h2>'
+      + '<div class="prose" style="margin-top:18px">'
+      + '<p>Trusted Enterprises is a wholesale house for mobile spare parts. We supply service centres, multi-brand retailers and independent repair benches with graded components — from OLED assemblies down to FPC sockets.</p>'
+      + '<p>The business is owned and run by <strong style="color:var(--fg)">Shahnawaz Mirza</strong>. Buying decisions, lot grading and trade terms sit with the owner, not a rotating account team.</p>'
+      + '<h3>What we carry</h3>'
+      + '<p>Displays, batteries, charging ports, charging boards, charging flexes, main flexes, camera flexes, power and volume flexes, speakers, earpieces, microphones, vibration motors, camera modules, camera glass, fingerprint parts, sensors, SIM trays, frames, housings, board connectors, FPC connectors, antenna and NFC components, plus the small hardware a technician reorders every week.</p>'
+      + '<h3>How the catalogue is built</h3>'
+      + '<p>Every SKU is tied to one or more phone models. Where a charging port, antenna or NFC coil is shared across a generation, the listing says so. Add a model later and the same structure scales — brands, models, part families and compatibility groups are data, not hard-coded pages.</p>'
+      + '<h3>Who we sell to</h3>'
+      + '<p>Trade only. If you run a bench, a chain of counters or a parts window, this floor is for you. Consumer walk-in retail is not the model.</p>'
+      + '</div></div>';
+  }
+
+  function viewWhy() {
+    const items = [
+      ["Mapped compatibility", "A part is useless if it only almost fits. Listings show every model that shares the component."],
+      ["Honest grades", "OEM compatible, premium aftermarket or original pull — printed on the card so your technician is not guessing."],
+      ["Stock you can plan around", "In stock, low, or backorder, with a unit count. Build quantities into the enquiry before you talk to the desk."],
+      ["Owner accountability", "Shahnawaz Mirza is the proprietor. Disputes, replacements and lot questions come back to one desk."],
+      ["Bench-complete range", "Assemblies and the small pieces: meshes, trays, FPC sockets, antenna springs. One house for the reorder list."],
+      ["Trade packing", "Anti-static bags, SKU labels, MOQ that matches how shops actually buy — not single-piece consumer kits."]
+    ];
+    return '<div class="wrap page"><div class="kicker">Why us</div><h2>Built for people who open phones for a living.</h2>'
+      + '<div class="why-grid" style="margin-top:28px">'+items.map(([h,p])=>'<div class="why"><h3>'+h+'</h3><p>'+p+'</p></div>').join("")+'</div></div>';
+  }
+
+  function viewContact() {
+    const u = currentUser();
+    return '<div class="wrap page"><div class="two"><div><div class="kicker">Desk</div><h2>Contact</h2>'
+      + '<div class="prose" style="margin-top:16px">'
+      + '<p><strong style="color:var(--fg)">Trusted Enterprises</strong><br>Proprietor: Shahnawaz Mirza<br>Wholesale mobile spare parts · India</p>'
+      + '<p>Trade desk hours: Monday–Saturday, 10:00–19:00 IST.<br>Email for registered accounts: trade@trustedenterprises.co</p>'
+      + '<p>For line pricing and lot photos, add parts to your enquiry list with quantities, then send it from the Enquiries page. This standalone catalogue stores the ticket in your browser so you can quote it to the desk.</p>'
+      + '</div></div><div class="panel"><form class="form" id="cform">'
+      + '<div class="field"><label>Name</label><input name="name" required value="'+(u?esc(u.name):"")+'" /></div>'
+      + '<div class="field"><label>Trade email</label><input name="email" type="email" required value="'+(u?esc(u.email):"")+'" /></div>'
+      + '<div class="field"><label>Shop / company</label><input name="shop" /></div>'
+      + '<div class="field"><label>Message</label><textarea name="msg" required placeholder="Models, quantities, city"></textarea></div>'
+      + '<button class="btn btn-p" type="submit">Send to desk</button>'
+      + '</form></div></div></div>';
+  }
+
+  function viewPrivacy() {
+    return '<div class="wrap page"><div class="kicker">Legal</div><h2>Privacy policy</h2><div class="prose" style="margin-top:16px">'
+      + '<p>This site is a standalone catalogue. It does not run a remote user database and it does not email your credentials anywhere.</p>'
+      + '<h3>What stays on this device</h3><ul>'
+      + '<li>Trade account name, email and a one-way password hash in localStorage.</li>'
+      + '<li>Optional profile photograph, stored as a compressed image on this device only.</li>'
+      + '<li>Favourites, enquiry quantities, recently viewed SKUs and submitted enquiry tickets.</li>'
+      + '<li>Sound preference.</li></ul>'
+      + '<h3>Passwords</h3><p>Passwords are never shown, never listed on the profile, never copied into enquiry tickets and never sent to a server. Only a hash is kept, so the original password cannot be read back from storage.</p>'
+      + '<h3>No tracking stack</h3><p>There are no advertising pixels and no third-party analytics in this file. Google Fonts may load typefaces if your browser is online.</p>'
+      + '<h3>Clearing data</h3><p>Sign out, delete the account from Profile, or clear this site’s localStorage in your browser. That removes the local trade account from this device.</p>'
+      + '<p>Proprietor: Shahnawaz Mirza, Trusted Enterprises.</p></div></div>';
+  }
+
+  function viewTerms() {
+    return '<div class="wrap page"><div class="kicker">Legal</div><h2>Terms & conditions</h2><div class="prose" style="margin-top:16px">'
+      + '<p>By using this catalogue you agree to buy as a trade customer. Consumer distance-selling rights for finished retail goods do not describe this wholesale floor.</p>'
+      + '<h3>Pricing</h3><p>Prices are indicative wholesale in INR, exclusive of tax and freight unless a desk quote says otherwise. Lots, FX and inbound cost can move a line. A submitted enquiry is a request to quote, not an invoice.</p>'
+      + '<h3>Compatibility</h3><p>Model lists are a technical aid. Board revisions, region SKUs and aftermarket housings can still differ. Confirm on a donor or photograph before a large indent.</p>'
+      + '<h3>Grades and warranty</h3><p>Warranty windows are replacement-only on DOA parts returned in original packing, subject to inspection. Liquid, physical and soldering damage voids cover. Original-pull parts are used devices and may show handling marks.</p>'
+      + '<h3>Accounts</h3><p>A local trade account on this file is not credit approval. Credit, COD and transport terms are set by Shahnawaz Mirza when the desk confirms an order.</p>'
+      + '<h3>Trademarks</h3><p>Apple, Samsung and all other marque names are used only to identify compatibility. Trusted Enterprises is not affiliated with those manufacturers.</p></div></div>';
+  }
+
+  function viewDisclaimer() {
+    return '<div class="wrap page"><div class="kicker">Legal</div><h2>Disclaimer</h2><div class="prose" style="margin-top:16px">'
+      + '<p>Trusted Enterprises is an independent wholesale supplier of mobile repair components. We are not an authorised service partner of Apple Inc., Samsung Electronics, Xiaomi, Google, or any other brand shown in this catalogue.</p>'
+      + '<p>All manufacturer names, model names and logos remain the property of their owners and are used solely to describe spare-part fitment.</p>'
+      + '<p>Catalogue data, stock flags and prices are a working sample for this Version 2 trade site. They must be reconfirmed with the desk before payment or dispatch. Compatibility groups are best-effort maps of commonly shared parts; they are not a substitute for technician judgement.</p>'
+      + '<p>This HTML file stores account data only in your browser. If you copy the file to another computer, that copy does not contain your account unless you bring the browser storage with it.</p>'
+      + '<p>Owner and responsible person: Shahnawaz Mirza.</p></div></div>';
+  }
+
+  function viewAuth(mode) {
+    const signup = mode === "signup";
+    return '<div class="wrap page" style="display:grid;place-items:center"><div class="auth-card">'
+      + '<div class="kicker">Trade account</div><h2>'+(signup?"Create account":"Sign in")+'</h2>'
+      + '<p class="muted" style="margin:8px 0 18px">'+(signup?"Stored only in this browser. The password is hashed and never shown again.":"Use the email on this device. Passwords are never displayed.")+'</p>'
+      + '<form class="form" id="aform" data-mode="'+mode+'">'
+      + (signup ? '<div class="field"><label>Full name</label><input name="name" required autocomplete="name" /></div>' : "")
+      + '<div class="field"><label>Email</label><input name="email" type="email" required autocomplete="username" /></div>'
+      + '<div class="field"><label>Password</label><input name="password" type="password" required minlength="6" autocomplete="'+(signup?"new-password":"current-password")+'" /></div>'
+      + (signup ? '<div class="field"><label>Confirm password</label><input name="confirm" type="password" required minlength="6" autocomplete="new-password" /></div>' : "")
+      + '<button class="btn btn-p" type="submit">'+(signup?"Create account":"Sign in")+'</button>'
+      + '</form>'
+      + '<p class="muted" style="margin-top:16px;font-size:13px">'+(signup?'Already on the desk? <a href="#/login" style="color:var(--accent)">Sign in</a>':'Need an account? <a href="#/signup" style="color:var(--accent)">Create one</a>')+'</p>'
+      + '</div></div>';
+  }
+
+  function viewProfile() {
+    const u = currentUser();
+    if (!u) return viewAuth("login");
+    const av = u.avatar ? '<img src="'+u.avatar+'" alt="">' : esc(u.name.charAt(0).toUpperCase());
+    return '<div class="wrap page"><div class="kicker">Account</div><h2>Profile</h2>'
+      + '<div class="panel" style="margin-top:18px"><div class="profile-top">'
+      + '<div class="avatar-lg">'+av+'</div><div>'
+      + '<h3>'+esc(u.name)+'</h3><p class="muted">'+esc(u.email)+'</p>'
+      + '<p class="faint" style="font-size:13px">Member since '+esc(u.since)+' · ID '+esc(u.id)+'</p>'
+      + '<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">'
+      + '<label class="btn btn-g btn-sm">Upload photo<input id="avatar" type="file" accept="image/*" hidden /></label>'
+      + '<button class="btn btn-g btn-sm" data-act="logout">Sign out</button>'
+      + '</div></div></div>'
+      + '<form class="form" id="pform" style="margin-top:22px;max-width:420px">'
+      + '<div class="field"><label>Display name</label><input name="name" required value="'+esc(u.name)+'" /></div>'
+      + '<div class="field"><label>Email</label><input value="'+esc(u.email)+'" disabled /></div>'
+      + '<p class="faint" style="font-size:13px">Email is the sign-in key and cannot be edited here. Passwords are not stored in readable form and cannot be displayed.</p>'
+      + '<button class="btn btn-p" type="submit">Save name</button>'
+      + '</form>'
+      + '<p style="margin-top:28px"><button class="btn btn-g btn-sm" data-act="delacc">Delete local account</button></p>'
+      + '</div></div>';
+  }
+
+  function viewFavs() {
+    const list = favs().map((id) => BY_ID[id]).filter(Boolean);
+    return '<div class="wrap page"><div class="sec-head"><div><div class="kicker">Saved</div><h2>Favourites</h2><p class="muted">'+list.length+' parts</p></div></div>'
+      + (list.length ? '<div class="prod-grid">'+list.map(productCard).join("")+'</div>' : '<div class="empty">No favourites yet. Heart a part on the catalogue.</div>')
+      + '</div>';
+  }
+
+  function viewEnq() {
+    const rows = enq();
+    const items = rows.map((r) => ({ r, p: BY_ID[r.id] })).filter((x) => x.p);
+    const total = items.reduce((s, x) => s + x.p.price * x.r.qty, 0);
+    const html = items.map(({ r, p }) => '<div class="enq-row">'
+      + '<div><h4>'+esc(p.name)+'</h4><div class="faint">'+esc(p.sku)+' · '+fmt(p.price)+'</div></div>'
+      + '<div class="qty"><button data-act="eqty" data-id="'+p.id+'" data-d="-1">'+ICONS.minus+'</button><span style="width:36px;text-align:center">'+r.qty+'</span><button data-act="eqty" data-id="'+p.id+'" data-d="1">'+ICONS.plus+'</button></div>'
+      + '<strong>'+fmt(p.price * r.qty)+'</strong>'
+      + '<button class="icon-btn" data-act="erem" data-id="'+p.id+'" aria-label="Remove">'+ICONS.x+'</button>'
+      + '</div>').join("");
+    const past = submitted();
+    return '<div class="wrap page"><div class="sec-head"><div><div class="kicker">Trade</div><h2>Enquiry list</h2><p class="muted">Quantities stay on this device until you submit.</p></div></div>'
+      + (items.length ? '<div class="panel">'+html+'<div class="p-meta" style="margin-top:18px"><span class="muted">Indicative total</span><span class="price">'+fmt(total)+'</span></div>'
+      + '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:18px"><button class="btn btn-p" data-act="submitenq">Submit enquiry</button><button class="btn btn-g" data-act="printenq">Copy as text</button></div></div>'
+      : '<div class="empty">Enquiry list is empty. Add parts from the catalogue.</div>')
+      + (past.length ? '<section class="section"><h2>Submitted tickets</h2>'+past.map((t)=>'<div class="why" style="margin-top:10px"><h3>'+esc(t.id)+'</h3><p>'+esc(t.date)+' · '+t.items.length+' lines · '+fmt(t.total)+' · '+esc(t.status)+'</p></div>').join("")+'</section>' : "")
+      + '</div>';
+  }
+
+  function render() {
+    parseHash();
+    renderChrome();
+    const map = {
+      home: viewHome, catalogue: viewCatalogue, product: viewProduct, about: viewAbout, why: viewWhy,
+      contact: viewContact, privacy: viewPrivacy, terms: viewTerms, disclaimer: viewDisclaimer,
+      profile: viewProfile, favourites: viewFavs, enquiries: viewEnq,
+      login: () => viewAuth("login"), signup: () => viewAuth("signup")
+    };
+    $("#main").innerHTML = (map[state.view] || viewHome)();
+    window.scrollTo(0, 0);
+    bindDynamic();
+  }
+
+  function bindDynamic() {
+    const q = $("#q"); const qm = $("#qm");
+    const onQ = (e) => { state.q = e.target.value; state.page = 1; };
+    if (q) {
+      q.addEventListener("input", onQ);
+      q.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); go(catalogueQuery()); } });
+    }
+    if (qm) {
+      qm.addEventListener("input", onQ);
+      qm.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); go(catalogueQuery()); } });
+    }
+    const sort = $("#fsort");
+    if (sort) sort.addEventListener("change", () => { state.sort = sort.value; render(); });
+    const aform = $("#aform");
+    if (aform) aform.addEventListener("submit", onAuth);
+    const pform = $("#pform");
+    if (pform) pform.addEventListener("submit", onProfile);
+    const cform = $("#cform");
+    if (cform) cform.addEventListener("submit", onContact);
+    const av = $("#avatar");
+    if (av) av.addEventListener("change", onAvatar);
+    const pqty = $("#pqty");
+    if (pqty) pqty.addEventListener("change", () => { state.qty = Math.max(1, parseInt(pqty.value, 10) || 1); });
+  }
+
+  async function onAuth(e) {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const email = String(fd.get("email") || "").trim().toLowerCase();
+    const password = String(fd.get("password") || "");
+    const mode = e.target.getAttribute("data-mode");
+    if (!email || !password) return toast("Enter email and password");
+    const list = users();
+    if (mode === "signup") {
+      const name = String(fd.get("name") || "").trim();
+      const confirm = String(fd.get("confirm") || "");
+      if (name.length < 2) return toast("Enter your name");
+      if (password.length < 6) return toast("Use at least 6 characters");
+      if (password !== confirm) return toast("Passwords do not match");
+      if (list.some((u) => u.email === email)) return toast("That email already has an account on this device");
+      const passHash = await sha256(password);
+      const user = { id: uid("U"), name, email, passHash, avatar: "", since: new Date().toISOString().slice(0, 10) };
+      list.push(user); saveUsers(list); setSession(user.id); adoptGuest(user.id);
+      e.target.reset();
+      welcome(user);
+    } else {
+      const user = list.find((u) => u.email === email);
+      const passHash = await sha256(password);
+      if (!user || user.passHash !== passHash) return toast("Email or password is incorrect");
+      setSession(user.id); adoptGuest(user.id);
+      e.target.reset();
+      welcome(user);
+    }
+  }
+
+  function welcome(user) {
+    AudioEng.welcome();
+    const el = $("#welcome");
+    $("#welcomeInner").innerHTML = '<div class="welcome-kicker">Trusted Enterprises</div><h2>Welcome, '+esc(user.name.split(" ")[0])+'.</h2><p>Trade floor is ready.</p>';
+    el.classList.add("show");
+    setTimeout(() => { el.classList.remove("show"); go("catalogue"); render(); }, 1600);
+  }
+
+  function onProfile(e) {
+    e.preventDefault();
+    const u = currentUser(); if (!u) return;
+    const name = String(new FormData(e.target).get("name") || "").trim();
+    if (name.length < 2) return toast("Enter a name");
+    const list = users().map((x) => x.id === u.id ? Object.assign({}, x, { name }) : x);
+    saveUsers(list); toast("Name updated"); render();
+  }
+
+  function onContact(e) {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const ticket = { id: uid("MSG"), name: String(fd.get("name")), email: String(fd.get("email")), shop: String(fd.get("shop")), msg: String(fd.get("msg")), date: new Date().toISOString() };
+    const all = read("te_msgs", []); all.unshift(ticket); write("te_msgs", all);
+    e.target.reset();
+    toast("Message stored for the desk on this device");
+  }
+
+  function onAvatar(e) {
+    const file = e.target.files && e.target.files[0];
+    const u = currentUser(); if (!u || !file) return;
+    if (!file.type || file.type.indexOf("image/") !== 0) return toast("Choose an image file");
+    if (file.size > 5 * 1024 * 1024) return toast("Image must be under 5 MB");
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = function () {
+      const c = document.createElement("canvas"); c.width = 256; c.height = 256;
+      const ctx = c.getContext("2d");
+      const s = Math.min(img.width, img.height);
+      ctx.drawImage(img, (img.width - s) / 2, (img.height - s) / 2, s, s, 0, 0, 256, 256);
+      const data = c.toDataURL("image/jpeg", 0.86);
+      const list = users().map((x) => x.id === u.id ? Object.assign({}, x, { avatar: data }) : x);
+      saveUsers(list); URL.revokeObjectURL(url); toast("Photo updated"); render();
+    };
+    img.onerror = function () { toast("Could not read that image"); URL.revokeObjectURL(url); };
+    img.src = url;
+  }
+
+  function addToEnq(id, qty) {
+    const p = BY_ID[id]; if (!p) return;
+    const q = Math.max(p.moq || 1, qty || 1);
+    const list = enq();
+    const row = list.find((x) => x.id === id);
+    if (row) row.qty += q; else list.push({ id, qty: q });
+    saveEnq(list); AudioEng.add(); toast("Added to enquiry · "+p.sku); renderChrome();
+  }
+
+  function toggleFav(id) {
+    let list = favs();
+    if (list.indexOf(id) !== -1) list = list.filter((x) => x !== id);
+    else list.unshift(id);
+    saveFavs(list); AudioEng.click(); render();
+  }
+
+  function openDrawer(kind) {
+    const d = $("#drawer"); const ov = $("#ov");
+    if (kind === "menu") {
+      d.innerHTML = '<div class="drawer-h"><strong>Menu</strong><button class="icon-btn" data-act="close">'+ICONS.x+'</button></div><div class="drawer-b mnav">'
+        + '<a href="#/home" data-act="close">Home</a><a href="#/catalogue" data-act="close">Catalogue</a><a href="#/why" data-act="close">Why us</a><a href="#/about" data-act="close">About</a><a href="#/contact" data-act="close">Contact</a><a href="#/favourites" data-act="close">Favourites</a><a href="#/enquiries" data-act="close">Enquiry list</a><a href="#/profile" data-act="close">Profile</a>'
+        + '</div>';
+    }
+    d.classList.add("show"); ov.classList.add("show"); d.setAttribute("aria-hidden", "false");
+  }
+  function closeDrawer() {
+    $("#drawer").classList.remove("show"); $("#ov").classList.remove("show"); $("#drawer").setAttribute("aria-hidden", "true");
+  }
+
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("[data-go]");
+    if (a) { e.preventDefault(); go(a.getAttribute("data-go")); return; }
+    const b = e.target.closest("[data-act]");
+    if (!b) return;
+    const act = b.getAttribute("data-act");
+    const id = b.getAttribute("data-id");
+    if (act === "mute") AudioEng.toggle();
+    if (act === "menu") openDrawer("menu");
+    if (act === "close") closeDrawer();
+    if (act === "clearq") { state.q = ""; go(catalogueQuery()); }
+    if (act === "fav") toggleFav(id);
+    if (act === "add") addToEnq(id, state.view === "product" ? state.qty : (BY_ID[id] ? BY_ID[id].moq : 1));
+    if (act === "applyf") {
+      state.brand = $("#fbrand").value; state.model = $("#fmodel").value; state.type = $("#ftype").value;
+      state.stock = $("#fstock").value; state.grade = $("#fgrade").value; state.minP = $("#fmin").value; state.maxP = $("#fmax").value;
+      state.page = 1; go(catalogueQuery());
+    }
+    if (act === "resetf") {
+      state.brand = state.model = state.type = state.stock = state.grade = state.minP = state.maxP = state.q = "";
+      state.page = 1; go("#/catalogue");
+    }
+    if (act === "page") { state.page = parseInt(b.getAttribute("data-n"), 10); go(catalogueQuery()); }
+    if (act === "qty") {
+      const d = parseInt(b.getAttribute("data-d"), 10);
+      state.qty = Math.max(1, state.qty + d);
+      const inp = $("#pqty"); if (inp) inp.value = state.qty;
+    }
+    if (act === "eqty") {
+      const d = parseInt(b.getAttribute("data-d"), 10);
+      const list = enq().map((x) => x.id === id ? Object.assign({}, x, { qty: Math.max(1, x.qty + d) }) : x);
+      saveEnq(list); render();
+    }
+    if (act === "erem") { saveEnq(enq().filter((x) => x.id !== id)); render(); }
+    if (act === "submitenq") {
+      const items = enq().map((r) => ({ id: r.id, qty: r.qty, sku: BY_ID[r.id] && BY_ID[r.id].sku, name: BY_ID[r.id] && BY_ID[r.id].name, price: BY_ID[r.id] && BY_ID[r.id].price })).filter((x) => x.sku);
+      if (!items.length) return;
+      if (!currentUser()) { toast("Sign in to submit"); go("login"); return; }
+      const total = items.reduce((s, x) => s + x.price * x.qty, 0);
+      const ticket = { id: "TE-ENQ-" + Date.now().toString(36).toUpperCase(), date: new Date().toLocaleString("en-IN"), items, total, status: "Recorded on this device" };
+      const all = submitted(); all.unshift(ticket); saveSubmitted(all); saveEnq([]); AudioEng.add();
+      toast("Enquiry "+ticket.id+" recorded"); render();
+    }
+    if (act === "printenq") {
+      const items = enq().map((r) => { const p = BY_ID[r.id]; return p ? (r.qty + " × " + p.sku + " · " + p.name + " · " + fmt(p.price * r.qty)) : ""; }).filter(Boolean);
+      const text = "Trusted Enterprises enquiry\nOwner: Shahnawaz Mirza\n\n" + items.join("\n");
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast("Enquiry copied")).catch(() => toast("Copy failed"));
+      else toast("Copy not available");
+    }
+    if (act === "logout") { setSession(null); toast("Signed out"); go("home"); render(); }
+    if (act === "delacc") {
+      const u = currentUser(); if (!u) return;
+      if (!confirm("Delete the local account on this browser? Favourites and enquiries for this account will go with it.")) return;
+      saveUsers(users().filter((x) => x.id !== u.id));
+      setSession(null);
+      ["te_fav","te_enq","te_recent","te_sub"].forEach((k) => { try { localStorage.removeItem(k + "_" + u.id); } catch (err) {} });
+      toast("Local account removed"); go("home"); render();
+    }
+  });
+
+  $("#ov").addEventListener("click", closeDrawer);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
+    if (e.key === "/" && e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") {
+      e.preventDefault(); const el = $("#q") || $("#qm"); if (el) el.focus();
+    }
+  });
+  window.addEventListener("hashchange", render);
+
+  function boot() {
+    const bar = $("#bar"); const lp = $("#lpct");
+    compileCatalogue();
+    let pct = 0;
+    const t = setInterval(() => {
+      pct = Math.min(100, pct + 20);
+      bar.style.width = pct + "%";
+      lp.textContent = "Preparing catalogue " + pct + "%";
+      if (pct >= 100) {
+        clearInterval(t);
+        $("#loader").classList.add("hide");
+        $("#app").classList.add("ready");
+        render();
+      }
+    }, 40);
+  }
+
+  boot();
+})();
+</script>
+</body>
+</html>
